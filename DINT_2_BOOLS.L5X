@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Converts DINT to array of 32 BOOLs-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="20.05" TargetName="DINT_2_BOOLS" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2019-08-28T05:16:09.320Z" ContainsContext="true" Owner="Engineer" ExportDate="Wed Aug 28 16:11:48 2019" ExportOptions="References DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="Standard_UDTs">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="DINT_2_BOOLS" Revision="1.0" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-08-27T03:55:43.835Z" CreatedBy="ROCKWELL-VM\Engineer" EditedDate="2019-08-28T05:16:09.320Z" EditedBy="ROCKWELL-VM\Engineer" SoftwareRevision="v20.05"
+>
+<Description>
+<![CDATA[Converts DINT to array of 32 BOOLs]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="DINT_IN" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read/Write">
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="BOOL_ARR_OUT" TagType="Base" DataType="BOOL" Dimensions="32" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="RLL">
+<RLLContent>
+<Rung Number="0" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.0)OTE(BOOL_ARR_OUT[0]);]]>
+</Text>
+</Rung>
+<Rung Number="1" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.1)OTE(BOOL_ARR_OUT[1]);]]>
+</Text>
+</Rung>
+<Rung Number="2" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.2)OTE(BOOL_ARR_OUT[2]);]]>
+</Text>
+</Rung>
+<Rung Number="3" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.3)OTE(BOOL_ARR_OUT[3]);]]>
+</Text>
+</Rung>
+<Rung Number="4" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.4)OTE(BOOL_ARR_OUT[4]);]]>
+</Text>
+</Rung>
+<Rung Number="5" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.5)OTE(BOOL_ARR_OUT[5]);]]>
+</Text>
+</Rung>
+<Rung Number="6" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.6)OTE(BOOL_ARR_OUT[6]);]]>
+</Text>
+</Rung>
+<Rung Number="7" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.7)OTE(BOOL_ARR_OUT[7]);]]>
+</Text>
+</Rung>
+<Rung Number="8" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.8)OTE(BOOL_ARR_OUT[8]);]]>
+</Text>
+</Rung>
+<Rung Number="9" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.9)OTE(BOOL_ARR_OUT[9]);]]>
+</Text>
+</Rung>
+<Rung Number="10" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.10)OTE(BOOL_ARR_OUT[10]);]]>
+</Text>
+</Rung>
+<Rung Number="11" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.11)OTE(BOOL_ARR_OUT[11]);]]>
+</Text>
+</Rung>
+<Rung Number="12" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.12)OTE(BOOL_ARR_OUT[12]);]]>
+</Text>
+</Rung>
+<Rung Number="13" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.13)OTE(BOOL_ARR_OUT[13]);]]>
+</Text>
+</Rung>
+<Rung Number="14" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.14)OTE(BOOL_ARR_OUT[14]);]]>
+</Text>
+</Rung>
+<Rung Number="15" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.15)OTE(BOOL_ARR_OUT[15]);]]>
+</Text>
+</Rung>
+<Rung Number="16" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.16)OTE(BOOL_ARR_OUT[16]);]]>
+</Text>
+</Rung>
+<Rung Number="17" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.17)OTE(BOOL_ARR_OUT[17]);]]>
+</Text>
+</Rung>
+<Rung Number="18" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.18)OTE(BOOL_ARR_OUT[18]);]]>
+</Text>
+</Rung>
+<Rung Number="19" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.19)OTE(BOOL_ARR_OUT[19]);]]>
+</Text>
+</Rung>
+<Rung Number="20" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.20)OTE(BOOL_ARR_OUT[20]);]]>
+</Text>
+</Rung>
+<Rung Number="21" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.21)OTE(BOOL_ARR_OUT[21]);]]>
+</Text>
+</Rung>
+<Rung Number="22" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.22)OTE(BOOL_ARR_OUT[22]);]]>
+</Text>
+</Rung>
+<Rung Number="23" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.23)OTE(BOOL_ARR_OUT[23]);]]>
+</Text>
+</Rung>
+<Rung Number="24" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.24)OTE(BOOL_ARR_OUT[24]);]]>
+</Text>
+</Rung>
+<Rung Number="25" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.25)OTE(BOOL_ARR_OUT[25]);]]>
+</Text>
+</Rung>
+<Rung Number="26" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.26)OTE(BOOL_ARR_OUT[26]);]]>
+</Text>
+</Rung>
+<Rung Number="27" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.27)OTE(BOOL_ARR_OUT[27]);]]>
+</Text>
+</Rung>
+<Rung Number="28" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.28)OTE(BOOL_ARR_OUT[28]);]]>
+</Text>
+</Rung>
+<Rung Number="29" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.29)OTE(BOOL_ARR_OUT[29]);]]>
+</Text>
+</Rung>
+<Rung Number="30" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.30)OTE(BOOL_ARR_OUT[30]);]]>
+</Text>
+</Rung>
+<Rung Number="31" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.31)OTE(BOOL_ARR_OUT[31]);]]>
+</Text>
+</Rung>
+</RLLContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>

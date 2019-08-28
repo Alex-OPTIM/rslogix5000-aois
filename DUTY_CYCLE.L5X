@@ -1,0 +1,794 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Cycles operation of group of machines-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="20.05" TargetName="DUTY_CYCLE" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2019-08-28T05:55:41.677Z" ContainsContext="true" Owner="Engineer" ExportDate="Wed Aug 28 16:12:18 2019" ExportOptions="References DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="Standard_UDTs">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Name="BOOLS_2_DINT" Revision="1.0" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-08-27T03:35:20.459Z" CreatedBy="ROCKWELL-VM\Engineer" EditedDate="2019-08-28T05:15:56.724Z" EditedBy="ROCKWELL-VM\Engineer" SoftwareRevision="v20.05">
+<Description>
+<![CDATA[Converts array of 32 BOOL to DINT]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="BOOL_ARR_IN" TagType="Base" DataType="BOOL" Dimensions="32" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="DINT_OUT" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read Only">
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="RLL">
+<RLLContent>
+<Rung Number="0" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[0])OTE(DINT_OUT.0);]]>
+</Text>
+</Rung>
+<Rung Number="1" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[1])OTE(DINT_OUT.1);]]>
+</Text>
+</Rung>
+<Rung Number="2" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[2])OTE(DINT_OUT.2);]]>
+</Text>
+</Rung>
+<Rung Number="3" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[3])OTE(DINT_OUT.3);]]>
+</Text>
+</Rung>
+<Rung Number="4" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[4])OTE(DINT_OUT.4);]]>
+</Text>
+</Rung>
+<Rung Number="5" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[5])OTE(DINT_OUT.5);]]>
+</Text>
+</Rung>
+<Rung Number="6" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[6])OTE(DINT_OUT.6);]]>
+</Text>
+</Rung>
+<Rung Number="7" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[7])OTE(DINT_OUT.7);]]>
+</Text>
+</Rung>
+<Rung Number="8" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[8])OTE(DINT_OUT.8);]]>
+</Text>
+</Rung>
+<Rung Number="9" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[9])OTE(DINT_OUT.9);]]>
+</Text>
+</Rung>
+<Rung Number="10" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[10])OTE(DINT_OUT.10);]]>
+</Text>
+</Rung>
+<Rung Number="11" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[11])OTE(DINT_OUT.11);]]>
+</Text>
+</Rung>
+<Rung Number="12" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[12])OTE(DINT_OUT.12);]]>
+</Text>
+</Rung>
+<Rung Number="13" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[13])OTE(DINT_OUT.13);]]>
+</Text>
+</Rung>
+<Rung Number="14" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[14])OTE(DINT_OUT.14);]]>
+</Text>
+</Rung>
+<Rung Number="15" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[15])OTE(DINT_OUT.15);]]>
+</Text>
+</Rung>
+<Rung Number="16" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[16])OTE(DINT_OUT.16);]]>
+</Text>
+</Rung>
+<Rung Number="17" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[17])OTE(DINT_OUT.17);]]>
+</Text>
+</Rung>
+<Rung Number="18" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[18])OTE(DINT_OUT.18);]]>
+</Text>
+</Rung>
+<Rung Number="19" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[19])OTE(DINT_OUT.19);]]>
+</Text>
+</Rung>
+<Rung Number="20" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[20])OTE(DINT_OUT.20);]]>
+</Text>
+</Rung>
+<Rung Number="21" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[21])OTE(DINT_OUT.21);]]>
+</Text>
+</Rung>
+<Rung Number="22" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[22])OTE(DINT_OUT.22);]]>
+</Text>
+</Rung>
+<Rung Number="23" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[23])OTE(DINT_OUT.23);]]>
+</Text>
+</Rung>
+<Rung Number="24" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[24])OTE(DINT_OUT.24);]]>
+</Text>
+</Rung>
+<Rung Number="25" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[25])OTE(DINT_OUT.25);]]>
+</Text>
+</Rung>
+<Rung Number="26" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[26])OTE(DINT_OUT.26);]]>
+</Text>
+</Rung>
+<Rung Number="27" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[27])OTE(DINT_OUT.27);]]>
+</Text>
+</Rung>
+<Rung Number="28" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[28])OTE(DINT_OUT.28);]]>
+</Text>
+</Rung>
+<Rung Number="29" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[29])OTE(DINT_OUT.29);]]>
+</Text>
+</Rung>
+<Rung Number="30" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[30])OTE(DINT_OUT.30);]]>
+</Text>
+</Rung>
+<Rung Number="31" Type="N">
+<Text>
+<![CDATA[XIC(BOOL_ARR_IN[31])OTE(DINT_OUT.31);]]>
+</Text>
+</Rung>
+</RLLContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="DINT_2_BOOLS" Revision="1.0" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-08-27T03:55:43.835Z" CreatedBy="ROCKWELL-VM\Engineer" EditedDate="2019-08-28T05:16:09.320Z" EditedBy="ROCKWELL-VM\Engineer" SoftwareRevision="v20.05">
+<Description>
+<![CDATA[Converts DINT to array of 32 BOOLs]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="DINT_IN" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read/Write">
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="BOOL_ARR_OUT" TagType="Base" DataType="BOOL" Dimensions="32" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="RLL">
+<RLLContent>
+<Rung Number="0" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.0)OTE(BOOL_ARR_OUT[0]);]]>
+</Text>
+</Rung>
+<Rung Number="1" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.1)OTE(BOOL_ARR_OUT[1]);]]>
+</Text>
+</Rung>
+<Rung Number="2" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.2)OTE(BOOL_ARR_OUT[2]);]]>
+</Text>
+</Rung>
+<Rung Number="3" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.3)OTE(BOOL_ARR_OUT[3]);]]>
+</Text>
+</Rung>
+<Rung Number="4" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.4)OTE(BOOL_ARR_OUT[4]);]]>
+</Text>
+</Rung>
+<Rung Number="5" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.5)OTE(BOOL_ARR_OUT[5]);]]>
+</Text>
+</Rung>
+<Rung Number="6" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.6)OTE(BOOL_ARR_OUT[6]);]]>
+</Text>
+</Rung>
+<Rung Number="7" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.7)OTE(BOOL_ARR_OUT[7]);]]>
+</Text>
+</Rung>
+<Rung Number="8" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.8)OTE(BOOL_ARR_OUT[8]);]]>
+</Text>
+</Rung>
+<Rung Number="9" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.9)OTE(BOOL_ARR_OUT[9]);]]>
+</Text>
+</Rung>
+<Rung Number="10" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.10)OTE(BOOL_ARR_OUT[10]);]]>
+</Text>
+</Rung>
+<Rung Number="11" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.11)OTE(BOOL_ARR_OUT[11]);]]>
+</Text>
+</Rung>
+<Rung Number="12" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.12)OTE(BOOL_ARR_OUT[12]);]]>
+</Text>
+</Rung>
+<Rung Number="13" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.13)OTE(BOOL_ARR_OUT[13]);]]>
+</Text>
+</Rung>
+<Rung Number="14" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.14)OTE(BOOL_ARR_OUT[14]);]]>
+</Text>
+</Rung>
+<Rung Number="15" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.15)OTE(BOOL_ARR_OUT[15]);]]>
+</Text>
+</Rung>
+<Rung Number="16" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.16)OTE(BOOL_ARR_OUT[16]);]]>
+</Text>
+</Rung>
+<Rung Number="17" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.17)OTE(BOOL_ARR_OUT[17]);]]>
+</Text>
+</Rung>
+<Rung Number="18" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.18)OTE(BOOL_ARR_OUT[18]);]]>
+</Text>
+</Rung>
+<Rung Number="19" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.19)OTE(BOOL_ARR_OUT[19]);]]>
+</Text>
+</Rung>
+<Rung Number="20" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.20)OTE(BOOL_ARR_OUT[20]);]]>
+</Text>
+</Rung>
+<Rung Number="21" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.21)OTE(BOOL_ARR_OUT[21]);]]>
+</Text>
+</Rung>
+<Rung Number="22" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.22)OTE(BOOL_ARR_OUT[22]);]]>
+</Text>
+</Rung>
+<Rung Number="23" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.23)OTE(BOOL_ARR_OUT[23]);]]>
+</Text>
+</Rung>
+<Rung Number="24" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.24)OTE(BOOL_ARR_OUT[24]);]]>
+</Text>
+</Rung>
+<Rung Number="25" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.25)OTE(BOOL_ARR_OUT[25]);]]>
+</Text>
+</Rung>
+<Rung Number="26" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.26)OTE(BOOL_ARR_OUT[26]);]]>
+</Text>
+</Rung>
+<Rung Number="27" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.27)OTE(BOOL_ARR_OUT[27]);]]>
+</Text>
+</Rung>
+<Rung Number="28" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.28)OTE(BOOL_ARR_OUT[28]);]]>
+</Text>
+</Rung>
+<Rung Number="29" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.29)OTE(BOOL_ARR_OUT[29]);]]>
+</Text>
+</Rung>
+<Rung Number="30" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.30)OTE(BOOL_ARR_OUT[30]);]]>
+</Text>
+</Rung>
+<Rung Number="31" Type="N">
+<Text>
+<![CDATA[XIC(DINT_IN.31)OTE(BOOL_ARR_OUT[31]);]]>
+</Text>
+</Rung>
+</RLLContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Use="Target" Name="DUTY_CYCLE" Revision="1.0" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-08-28T05:16:57.608Z" CreatedBy="ROCKWELL-VM\Engineer" EditedDate="2019-08-28T05:55:41.677Z" EditedBy="ROCKWELL-VM\Engineer" SoftwareRevision="v20.05"
+>
+<Description>
+<![CDATA[Cycles operation of group of machines]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="I_NoRunSwitch" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="None">
+<Description>
+<![CDATA[Set to prevent from switching without removing I_RunRequest]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="I_RunRequest" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="None">
+<Description>
+<![CDATA[Set to start (or continue) to duty cycle]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="I_RuntimeM_SP" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="None">
+<Description>
+<![CDATA[Number of dutycycle minutes (60 = 1 hour, 480 = 8 hours) [1-1440]]]>
+</Description>
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="I_UnitEnabled" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="None">
+<Description>
+<![CDATA[Set bit to enable a UNIT in the array of 32]]>
+</Description>
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="I_UnitRunOverlapMS_SP" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="None">
+<Description>
+<![CDATA[Machine run overlap in ms [ 0 - 59000 ]]]>
+</Description>
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="O_CurrentRuntimeS" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="None">
+<Description>
+<![CDATA[Runtime of current UNIT in seconds]]>
+</Description>
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="O_CurrentUnitIndex" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="None">
+<Description>
+<![CDATA[Index of currently running UNIT]]>
+</Description>
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="O_Enable_F" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="None">
+<Description>
+<![CDATA[FAULT: ON is when No UNITs have been enabled]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="O_RunUnit" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="None">
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="x_unlatchDelay_TMR" DataType="TIMER" ExternalAccess="None">
+<DefaultData>00 00 00 00 D0 07 00 00 00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="2000"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="x_runtimeS_SP" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="x_dint2BoolArr" DataType="DINT_2_BOOLS" ExternalAccess="None">
+<DefaultData>01 00 00 00 00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="DINT_2_BOOLS">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DINT_IN" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="x_unitEnable" DataType="BOOL" Dimensions="32" Radix="Decimal" ExternalAccess="None">
+<DefaultData/>
+<DefaultData Format="Decorated">
+<Array DataType="BOOL" Dimensions="32" Radix="Decimal">
+<Element Index="[0]" Value="0"/>
+<Element Index="[1]" Value="0"/>
+<Element Index="[2]" Value="0"/>
+<Element Index="[3]" Value="0"/>
+<Element Index="[4]" Value="0"/>
+<Element Index="[5]" Value="0"/>
+<Element Index="[6]" Value="0"/>
+<Element Index="[7]" Value="0"/>
+<Element Index="[8]" Value="0"/>
+<Element Index="[9]" Value="0"/>
+<Element Index="[10]" Value="0"/>
+<Element Index="[11]" Value="0"/>
+<Element Index="[12]" Value="0"/>
+<Element Index="[13]" Value="0"/>
+<Element Index="[14]" Value="0"/>
+<Element Index="[15]" Value="0"/>
+<Element Index="[16]" Value="0"/>
+<Element Index="[17]" Value="0"/>
+<Element Index="[18]" Value="0"/>
+<Element Index="[19]" Value="0"/>
+<Element Index="[20]" Value="0"/>
+<Element Index="[21]" Value="0"/>
+<Element Index="[22]" Value="0"/>
+<Element Index="[23]" Value="0"/>
+<Element Index="[24]" Value="0"/>
+<Element Index="[25]" Value="0"/>
+<Element Index="[26]" Value="0"/>
+<Element Index="[27]" Value="0"/>
+<Element Index="[28]" Value="0"/>
+<Element Index="[29]" Value="0"/>
+<Element Index="[30]" Value="0"/>
+<Element Index="[31]" Value="0"/>
+</Array>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="x_runPermission" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="x_secondPulse_TON" DataType="TIMER" ExternalAccess="None">
+<DefaultData>00 00 00 00 E8 03 00 00 4C 01 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="1000"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="332"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="x_runUnit_C" DataType="BOOL" Dimensions="32" Radix="Decimal" ExternalAccess="None">
+<DefaultData/>
+<DefaultData Format="Decorated">
+<Array DataType="BOOL" Dimensions="32" Radix="Decimal">
+<Element Index="[0]" Value="0"/>
+<Element Index="[1]" Value="0"/>
+<Element Index="[2]" Value="0"/>
+<Element Index="[3]" Value="0"/>
+<Element Index="[4]" Value="0"/>
+<Element Index="[5]" Value="0"/>
+<Element Index="[6]" Value="0"/>
+<Element Index="[7]" Value="0"/>
+<Element Index="[8]" Value="0"/>
+<Element Index="[9]" Value="0"/>
+<Element Index="[10]" Value="0"/>
+<Element Index="[11]" Value="0"/>
+<Element Index="[12]" Value="0"/>
+<Element Index="[13]" Value="0"/>
+<Element Index="[14]" Value="0"/>
+<Element Index="[15]" Value="0"/>
+<Element Index="[16]" Value="0"/>
+<Element Index="[17]" Value="0"/>
+<Element Index="[18]" Value="0"/>
+<Element Index="[19]" Value="0"/>
+<Element Index="[20]" Value="0"/>
+<Element Index="[21]" Value="0"/>
+<Element Index="[22]" Value="0"/>
+<Element Index="[23]" Value="0"/>
+<Element Index="[24]" Value="0"/>
+<Element Index="[25]" Value="0"/>
+<Element Index="[26]" Value="0"/>
+<Element Index="[27]" Value="0"/>
+<Element Index="[28]" Value="0"/>
+<Element Index="[29]" Value="0"/>
+<Element Index="[30]" Value="0"/>
+<Element Index="[31]" Value="0"/>
+</Array>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="x_unitActRuntimeS" DataType="DINT" Dimensions="32" Radix="Decimal" ExternalAccess="None">
+<DefaultData>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<Array DataType="DINT" Dimensions="32" Radix="Decimal">
+<Element Index="[0]" Value="0"/>
+<Element Index="[1]" Value="0"/>
+<Element Index="[2]" Value="0"/>
+<Element Index="[3]" Value="0"/>
+<Element Index="[4]" Value="0"/>
+<Element Index="[5]" Value="0"/>
+<Element Index="[6]" Value="0"/>
+<Element Index="[7]" Value="0"/>
+<Element Index="[8]" Value="0"/>
+<Element Index="[9]" Value="0"/>
+<Element Index="[10]" Value="0"/>
+<Element Index="[11]" Value="0"/>
+<Element Index="[12]" Value="0"/>
+<Element Index="[13]" Value="0"/>
+<Element Index="[14]" Value="0"/>
+<Element Index="[15]" Value="0"/>
+<Element Index="[16]" Value="0"/>
+<Element Index="[17]" Value="0"/>
+<Element Index="[18]" Value="0"/>
+<Element Index="[19]" Value="0"/>
+<Element Index="[20]" Value="0"/>
+<Element Index="[21]" Value="0"/>
+<Element Index="[22]" Value="0"/>
+<Element Index="[23]" Value="0"/>
+<Element Index="[24]" Value="0"/>
+<Element Index="[25]" Value="0"/>
+<Element Index="[26]" Value="0"/>
+<Element Index="[27]" Value="0"/>
+<Element Index="[28]" Value="0"/>
+<Element Index="[29]" Value="0"/>
+<Element Index="[30]" Value="0"/>
+<Element Index="[31]" Value="0"/>
+</Array>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="x_unitIndexOnOverRunetime" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="x_unitIndex" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="x_secondPulseBuffer" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="x_ons" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="x_boolArr2Dint" DataType="BOOLS_2_DINT" ExternalAccess="None">
+<DefaultData>01 00 00 00 00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="BOOLS_2_DINT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DINT_OUT" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="RLL">
+<RLLContent>
+<Rung Number="0" Type="N">
+<Comment>
+<![CDATA[
+NAME
+Duty Cycle
+
+DESCRIPTION
+This AOI cycles operation of group of "UNIT"s which operate intermittently by number of hours.
+UNIT is a machine or other device (pump, fan, motor, etc.).
+
+MAIN FUNCTION
+Every N hours it switches to next enabled UNIT
+
+PARAMETERS
+I_NoRunSwitch : BOOL - Set to prevent from switching without removing I_RunRequest (it switches to the next UNIT only with new RunRequest)
+I_RunRequest : BOOL - Set to start (or continue) to duty cycle
+I_RuntimeM_SP : DINT - Number of dutycycle minutes (60 = 1 hour, 480 = 8 hours) [1-1440]
+I_UnitEnabled : DINT.X - Set bit to enable a UNIT in the array of 32
+I_UnitRunOverlapMS_SP : DINT - Machine run overlap in ms [ 0 - 59000 ]
+
+O_CurrentRuntimeS : DINT - Runtime of current UNIT in seconds
+O_CurrentUnitIndex : DINT - Index of currently running UNIT
+O_Enable_F : BOOL - FAULT: ON is when No UNITs have been enabled
+O_RunningUnit : DINT - Get bit of currently running UNIT
+
+DEPENDENCIES
+BOOLS_2_DINT v1.0
+DINT_2_BOOLS v1.0
+
+]]>
+</Comment>
+<Text>
+<![CDATA[XIC(I_RunRequest)[GRT(I_UnitRunOverlapMS_SP,59000) MOV(59000,I_UnitRunOverlapMS_SP) ,LES(I_UnitRunOverlapMS_SP,0) MOV(0,I_UnitRunOverlapMS_SP) ,MOV(I_UnitRunOverlapMS_SP,x_unlatchDelay_TMR.PRE) ,XIC(I_NoRunSwitch) MOV(0,x_unlatchDelay_TMR.PRE) ][LIM(1441,I_RuntimeM_SP,1) MOV(60,I_RuntimeM_SP) ,MUL(I_RuntimeM_SP,60,x_runtimeS_SP) ];]]>
+</Text>
+</Rung>
+<Rung Number="1" Type="N">
+<Text>
+<![CDATA[DINT_2_BOOLS(x_dint2BoolArr,I_UnitEnabled,x_unitEnable)EQU(I_UnitEnabled,0)OTE(O_Enable_F);]]>
+</Text>
+</Rung>
+<Rung Number="2" Type="N">
+<Text>
+<![CDATA[XIO(O_Enable_F)XIC(I_RunRequest)OTE(x_runPermission);]]>
+</Text>
+</Rung>
+<Rung Number="3" Type="N">
+<Text>
+<![CDATA[XIO(x_secondPulse_TON.DN)TON(x_secondPulse_TON,?,?);]]>
+</Text>
+</Rung>
+<Rung Number="4" Type="N">
+<Text>
+<![CDATA[XIC(x_secondPulse_TON.DN)ADD(x_secondPulseBuffer,1,x_secondPulseBuffer);]]>
+</Text>
+</Rung>
+<Rung Number="5" Type="N">
+<Text>
+<![CDATA[GEQ(x_unitActRuntimeS[x_unitIndex],x_runtimeS_SP)MOV(x_unitIndex,x_unitIndexOnOverRunetime);]]>
+</Text>
+</Rung>
+<Rung Number="6" Type="N">
+<Text>
+<![CDATA[XIC(x_runPermission)XIC(x_unitEnable[x_unitIndex])[ADD(x_unitActRuntimeS[x_unitIndex],x_secondPulseBuffer,x_unitActRuntimeS[x_unitIndex]) ,CLR(x_secondPulseBuffer) ][MOV(x_unitActRuntimeS[x_unitIndex],O_CurrentRuntimeS) ,MOV(x_unitIndex,O_CurrentUnitIndex) ]NEQ(x_unitIndexOnOverRunetime,x_unitIndex)OTL(x_runUnit_C[x_unitIndex]);]]>
+</Text>
+</Rung>
+<Rung Number="7" Type="N">
+<Text>
+<![CDATA[[XIO(I_NoRunSwitch) XIC(x_runPermission) ,XIC(I_NoRunSwitch) XIC(x_runPermission) [ONS(x_ons.0) ,XIO(x_runUnit_C[x_unitIndex]) ] ][EQU(x_unitIndexOnOverRunetime,x_unitIndex) ,XIO(x_unitEnable[x_unitIndex]) OTU(x_runUnit_C[x_unitIndex]) ]ADD(x_unitIndex,1,x_unitIndex);]]>
+</Text>
+</Rung>
+<Rung Number="8" Type="N">
+<Text>
+<![CDATA[XIC(x_runPermission)XIC(x_unitEnable[x_unitIndex])XIC(x_runUnit_C[x_unitIndexOnOverRunetime])NEQ(x_unitIndexOnOverRunetime,x_unitIndex)TON(x_unlatchDelay_TMR,?,?);]]>
+</Text>
+</Rung>
+<Rung Number="9" Type="N">
+<Text>
+<![CDATA[GEQ(x_unitIndex,31)MOV(0,x_unitIndex);]]>
+</Text>
+</Rung>
+<Rung Number="10" Type="N">
+<Text>
+<![CDATA[[XIC(x_unlatchDelay_TMR.DN) ,XIO(x_runPermission) ]ONS(x_ons.1)[OTU(x_runUnit_C[x_unitIndexOnOverRunetime]) ,[XIC(x_runPermission) ,XIC(I_NoRunSwitch) ] CLR(x_unitActRuntimeS[x_unitIndexOnOverRunetime]) ];]]>
+</Text>
+</Rung>
+<Rung Number="11" Type="N">
+<Text>
+<![CDATA[BOOLS_2_DINT(x_boolArr2Dint,x_runUnit_C,O_RunUnit)XIO(x_runPermission)OTU(x_runUnit_C[x_unitIndex])OTU(x_runUnit_C[x_unitIndexOnOverRunetime])CLR(x_secondPulseBuffer)CLR(O_RunUnit);]]>
+</Text>
+</Rung>
+</RLLContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="AddOnInstructionDefinition" Name="BOOLS_2_DINT"/>
+<Dependency Type="AddOnInstructionDefinition" Name="DINT_2_BOOLS"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
