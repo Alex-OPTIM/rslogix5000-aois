@@ -5,6 +5,8 @@ This repo includes a list of exported AOIs to L5K:
 - BOOLS_2_DINT
 - DINT_2_BOOLS
 
+How to import watch [Importing Add On Instruction in RSLogix 5000 (Studio 5000)](https://youtu.be/DInlqYIBAvg)
+
 ## DUTY_CYCLE
 
 DESCRIPTION  
