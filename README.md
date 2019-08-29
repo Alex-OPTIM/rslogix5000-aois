@@ -31,14 +31,16 @@ DEPENDENCIES
 - DINT_2_BOOLS v1.0
 
 ### Usage
-See a picture in [tests] folder. It shows usage as the following:
-- Units 0, 1, 2, 22 are enabled;
+See a picture below. It shows usage as the following:
+- Units 0, 1 and 22 are enabled (number 2 is disabled);
 - No Run Switch is OFF;
 - Run Request is ON;
 - Runtime of each machine is 3 minutes;
 - Overlap is 2 seconds
 
+![picture](https://github.com/Alex-OPTIM/rslogix5000-aois/raw/master/tests/test-Duty_Cycle_190828.png)
+
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Alex-OPTIM/rslogix5000-aois/blob/master/LICENSE) file for details
