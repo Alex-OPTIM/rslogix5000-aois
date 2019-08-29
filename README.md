@@ -42,12 +42,12 @@ See a picture below. It shows usage as the following:
 
 ## BOOLS_2_DINT
 MAIN FUNCTION  
-Converts array of 32 BOOLs to DINT
+Converts array of 32 BOOLs to DINT  
 ![picture](https://github.com/Alex-OPTIM/rslogix5000-aois/raw/master/tests/test-BOOLS_2_DINT.png)
 
 ## DINT_2_BOOLS
 MAIN FUNCTION  
-Converts DINT to array of 32 BOOLs
+Converts DINT to array of 32 BOOLs  
 ![picture](https://github.com/Alex-OPTIM/rslogix5000-aois/raw/master/tests/test-DINT_2_BOOLS.png)
 
 ---
