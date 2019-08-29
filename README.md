@@ -44,9 +44,3 @@ See a picture below. It shows usage as the following:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/Alex-OPTIM/rslogix5000-aois/blob/master/LICENSE) file for details
-
-## Other Links
-
-- [RS Logix 5000 Tag Converter](https://tags.controlx.io) to import into Node-RED 
-module [node-red-contrib-cip-ethernet-ip](https://github.com/netsmarttech/node-red-contrib-cip-ethernet-ip)
-- The best Node.JS module [node-ethernet-ip](https://github.com/cmseaton42/node-ethernet-ip) 
