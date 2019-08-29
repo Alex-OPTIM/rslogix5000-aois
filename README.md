@@ -1,11 +1,11 @@
 # Custom RSLogix 5000 AOI (Add-On Instructions)
 ## Context
 This repo includes a list of exported AOIs to L5K:
-- DUTY CYCLE
+- DUTY_CYCLE
 - BOOLS_2_DINT
 - DINT_2_BOOLS
 
-## DUTY CYCLE
+## DUTY_CYCLE
 
 DESCRIPTION  
 This AOI cycles operation of group of "UNIT"s which operate intermittently by number of hours.  
@@ -40,12 +40,22 @@ See a picture below. It shows usage as the following:
 
 ![picture](https://github.com/Alex-OPTIM/rslogix5000-aois/raw/master/tests/test-Duty_Cycle_190828.png)
 
+## BOOLS_2_DINT
+MAIN FUNCTION  
+Converts array of 32 BOOLs to DINT
+![picture](https://github.com/Alex-OPTIM/rslogix5000-aois/raw/master/tests/test-BOOLS_2_DINT.png)
 
+## DINT_2_BOOLS
+MAIN FUNCTION  
+Converts DINT to array of 32 BOOLs
+![picture](https://github.com/Alex-OPTIM/rslogix5000-aois/raw/master/tests/test-DINT_2_BOOLS.png)
+
+---
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/Alex-OPTIM/rslogix5000-aois/blob/master/LICENSE) file for details
 
-## Other Links
+## Other links
 
 - [RS Logix 5000 Tag Converter](https://tags.controlx.io) to import into Node-RED 
 module [node-red-contrib-cip-ethernet-ip](https://github.com/netsmarttech/node-red-contrib-cip-ethernet-ip)
