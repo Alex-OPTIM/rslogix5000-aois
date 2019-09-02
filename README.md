@@ -1,4 +1,12 @@
 # Custom RSLogix 5000 AOI (Add-On Instructions)
+Adding commonly used Add-On Instructions for everybody to use. The AOIs tested in 
+RSLogix 5000 and Studio 5000 with ControlLogix and CompactLogix Controllers (PLCs).
+Mostly used in versions 20 and 28, however they have nothing fancy and should work 
+with other versions. If something isn't working submit 
+[an issue](https://github.com/Alex-OPTIM/rslogix5000-aois/issues).  
+Also consider to contribute and add your AOIs by creating 
+a [Pull request](https://github.com/Alex-OPTIM/rslogix5000-aois/pulls)  
+
 ## Context
 This repo includes a list of exported AOIs to L5K:
 - DUTY_CYCLE
