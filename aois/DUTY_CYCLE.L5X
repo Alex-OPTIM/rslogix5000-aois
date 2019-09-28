@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Cycles operation of group of machines-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="20.05" TargetName="DUTY_CYCLE" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2019-08-28T05:55:41.677Z" ContainsContext="true" Owner="Engineer" ExportDate="Wed Aug 28 16:12:18 2019" ExportOptions="References DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="20.05" TargetName="DUTY_CYCLE" TargetType="AddOnInstructionDefinition" TargetRevision="1.1 " TargetLastEdited="2019-09-28T04:58:35.551Z" ContainsContext="true" Owner="Engineer" ExportDate="Sat Sep 28 21:52:03 2019" ExportOptions="References DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="Standard_UDTs">
 <DataTypes Use="Context">
 </DataTypes>
@@ -387,11 +387,14 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Use="Target" Name="DUTY_CYCLE" Revision="1.0" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-08-28T05:16:57.608Z" CreatedBy="ROCKWELL-VM\Engineer" EditedDate="2019-08-28T05:55:41.677Z" EditedBy="ROCKWELL-VM\Engineer" SoftwareRevision="v20.05"
+<AddOnInstructionDefinition Use="Target" Name="DUTY_CYCLE" Revision="1.1" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-08-28T05:16:57.608Z" CreatedBy="ROCKWELL-VM\Engineer" EditedDate="2019-09-28T04:58:35.551Z" EditedBy="ROCKWELL-VM\Engineer" SoftwareRevision="v20.05"
 >
 <Description>
 <![CDATA[Cycles operation of group of machines]]>
 </Description>
+<RevisionNote>
+<![CDATA[External Access added for all the parameters]]>
+</RevisionNote>
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
 <Description>
@@ -403,7 +406,7 @@
 <![CDATA[Enable Output - System Defined Parameter]]>
 </Description>
 </Parameter>
-<Parameter Name="I_NoRunSwitch" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="None">
+<Parameter Name="I_NoRunSwitch" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Set to prevent from switching without removing I_RunRequest]]>
 </Description>
@@ -412,7 +415,7 @@
 <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
 </DefaultData>
 </Parameter>
-<Parameter Name="I_RunRequest" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="None">
+<Parameter Name="I_RunRequest" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Set to start (or continue) to duty cycle]]>
 </Description>
@@ -421,7 +424,7 @@
 <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
 </DefaultData>
 </Parameter>
-<Parameter Name="I_RuntimeM_SP" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="None">
+<Parameter Name="I_RuntimeM_SP" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Number of dutycycle minutes (60 = 1 hour, 480 = 8 hours) [1-1440]]]>
 </Description>
@@ -430,7 +433,7 @@
 <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
 </DefaultData>
 </Parameter>
-<Parameter Name="I_UnitEnabled" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="None">
+<Parameter Name="I_UnitEnabled" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Set bit to enable a UNIT in the array of 32]]>
 </Description>
@@ -439,7 +442,7 @@
 <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
 </DefaultData>
 </Parameter>
-<Parameter Name="I_UnitRunOverlapMS_SP" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="None">
+<Parameter Name="I_UnitRunOverlapMS_SP" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Machine run overlap in ms [ 0 - 59000 ]]]>
 </Description>
@@ -448,7 +451,7 @@
 <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
 </DefaultData>
 </Parameter>
-<Parameter Name="O_CurrentRuntimeS" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="None">
+<Parameter Name="O_CurrentRuntimeS" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
 <Description>
 <![CDATA[Runtime of current UNIT in seconds]]>
 </Description>
@@ -457,7 +460,7 @@
 <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
 </DefaultData>
 </Parameter>
-<Parameter Name="O_CurrentUnitIndex" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="None">
+<Parameter Name="O_CurrentUnitIndex" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
 <Description>
 <![CDATA[Index of currently running UNIT]]>
 </Description>
@@ -466,7 +469,7 @@
 <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
 </DefaultData>
 </Parameter>
-<Parameter Name="O_Enable_F" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="None">
+<Parameter Name="O_Enable_F" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
 <Description>
 <![CDATA[FAULT: ON is when No UNITs have been enabled]]>
 </Description>
@@ -475,7 +478,7 @@
 <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
 </DefaultData>
 </Parameter>
-<Parameter Name="O_RunUnit" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="None">
+<Parameter Name="O_RunUnit" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
 <DefaultData>00 00 00 00</DefaultData>
 <DefaultData Format="Decorated">
 <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
